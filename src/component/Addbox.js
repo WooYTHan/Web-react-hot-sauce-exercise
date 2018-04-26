@@ -29,7 +29,7 @@ export default class Addbox extends React.Component {
         <input type="submit" value="Submit" />
       </form>
 
-        <span class="close2" onClick={this.props.closePopup}>x</span>
+        <span className="close2" onClick={this.props.closePopup}>x</span>
         </div>
       </div>
     );

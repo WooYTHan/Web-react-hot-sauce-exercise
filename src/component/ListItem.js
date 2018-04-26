@@ -13,17 +13,17 @@ export default class ListItem extends React.Component {
          return i.title.toLowerCase().match( searchString );
        });
      }
-    return newState.map(value => {
+    return newState.map((value,i) => {
       return (
-        <div className="listItem">
-          <span class="close" onClick={this.props.delete.bind(this, value)}>
+        <div key={i} className="listItem">
+          <span className="close" onClick={this.props.delete.bind(this, value)}>
             x
           </span>
           <Link className="link" to={`/sauceList/${value.title}/${value.id}`}>
             <div>
             <img src={value.imageURL} />
             <h2 className="subtitle">{value.title}</h2>
-            <p classNames="discription">{value.subtitle}</p>
+            <p className="discription">{value.subtitle}</p>
             </div>
           </Link>
         </div>
